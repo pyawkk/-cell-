@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MQt-AA-lYs">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Unc-dl-XD3">
+            <objects>
+                <tableViewController id="MQt-AA-lYs" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="203" sectionHeaderHeight="22" sectionFooterHeight="22" id="o6c-KF-saY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="203" id="iV6-kf-4Sz" customClass="PYTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iV6-kf-4Sz" id="QGb-iK-vEN">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="py.png" translatesAutoresizingMaskIntoConstraints="NO" id="CUU-T2-r3G">
+                                            <rect key="frame" x="20" y="18" width="58" height="51"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labasdfadsfasdfaelsdfasdfsadfad" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHQ-ua-hgj">
+                                            <rect key="frame" x="20" y="82" width="260" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="260" id="jw9-8u-bhv"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="py.png" translatesAutoresizingMaskIntoConstraints="NO" id="mPO-ip-5Ym">
+                                            <rect key="frame" x="26" y="111" width="78" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="78" id="Oc0-4R-uQN"/>
+                                                <constraint firstAttribute="height" constant="46" id="R0Y-3W-YAx"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="py.png" translatesAutoresizingMaskIntoConstraints="NO" id="QK4-ji-2SC">
+                                            <rect key="frame" x="20" y="18" width="58" height="51"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="58" id="8Dm-gq-yfQ"/>
+                                                <constraint firstAttribute="height" constant="51" id="kaQ-et-kcd"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QK4-ji-2SC" firstAttribute="leading" secondItem="lHQ-ua-hgj" secondAttribute="leading" id="8U1-Wz-3vw"/>
+                                        <constraint firstItem="QK4-ji-2SC" firstAttribute="leading" secondItem="QGb-iK-vEN" secondAttribute="leadingMargin" constant="12" id="Ime-jy-h5E"/>
+                                        <constraint firstItem="QK4-ji-2SC" firstAttribute="top" secondItem="QGb-iK-vEN" secondAttribute="topMargin" constant="10" id="TEh-5q-qa0"/>
+                                        <constraint firstItem="mPO-ip-5Ym" firstAttribute="leading" secondItem="lHQ-ua-hgj" secondAttribute="leading" constant="6" id="Xnf-G2-uzN"/>
+                                        <constraint firstItem="mPO-ip-5Ym" firstAttribute="top" secondItem="lHQ-ua-hgj" secondAttribute="bottom" constant="8" id="ZtA-Je-OZB"/>
+                                        <constraint firstItem="lHQ-ua-hgj" firstAttribute="top" secondItem="QK4-ji-2SC" secondAttribute="bottom" constant="13" id="fHf-xU-aqe"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="desc" destination="lHQ-ua-hgj" id="bb1-Lz-lbm"/>
+                                    <outlet property="icon" destination="QK4-ji-2SC" id="gtP-qI-jeJ"/>
+                                    <outlet property="img" destination="mPO-ip-5Ym" id="J4A-wO-iva"/>
+                                    <outlet property="imgHight" destination="R0Y-3W-YAx" id="XRs-Z7-HGB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MQt-AA-lYs" id="Pql-yj-UAD"/>
+                            <outlet property="delegate" destination="MQt-AA-lYs" id="fho-sB-MrW"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MIV-SN-AT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-325" y="291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="py.png" width="358" height="441"/>
+    </resources>
+</document>
